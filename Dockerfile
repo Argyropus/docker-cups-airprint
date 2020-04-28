@@ -1,16 +1,15 @@
-FROM ubuntu:zesty
+FROM ubuntu:focal
 
 # Add repos
-RUN echo 'deb http://us.archive.ubuntu.com/ubuntu/ zesty multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://us.archive.ubuntu.com/ubuntu/ zesty multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb http://us.archive.ubuntu.com/ubuntu/ zesty-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://us.archive.ubuntu.com/ubuntu/ zesty-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb http://archive.ubuntu.com/ubuntu/ zesty-security multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://archive.ubuntu.com/ubuntu/ zesty-security multiverse' >> /etc/apt/sources.list.d/multiverse.list
+RUN echo 'deb http://mirror.kakao.com/ubuntu/ focal multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb http://mirror.kakao.com/ubuntu/ focal-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb http://mirror.kakao.com/ubuntu/ focal-security multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal-security multiverse' >> /etc/apt/sources.list.d/multiverse.list
 
 # Install the packages we need. Avahi will be included
-RUN apt-get update && apt-get install -y \
-	brother-lpr-drivers-extra brother-cups-wrapper-extra \
+RUN apt update && apt install -y \
 	cups \
 	cups-pdf \
 	inotify-tools \
