@@ -1,12 +1,12 @@
-FROM ubuntu:focal
+FROM ubuntu:bionic
 
 # Add repos
-RUN echo 'deb http://mirror.kakao.com/ubuntu/ focal multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb http://mirror.kakao.com/ubuntu/ focal-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb http://mirror.kakao.com/ubuntu/ focal-security multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
-	echo 'deb-src http://mirror.kakao.com/ubuntu/ focal-security multiverse' >> /etc/apt/sources.list.d/multiverse.list
+RUN echo 'deb http://mirror.kakao.com/ubuntu/ bionic multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ bionic multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb http://mirror.kakao.com/ubuntu/ bionic-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ bionic-updates multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb http://mirror.kakao.com/ubuntu/ bionic-security multiverse' >> /etc/apt/sources.list.d/multiverse.list && \
+	echo 'deb-src http://mirror.kakao.com/ubuntu/ bionic-security multiverse' >> /etc/apt/sources.list.d/multiverse.list
 
 # Install the packages we need. Avahi will be included
 RUN apt update && apt install -y \
