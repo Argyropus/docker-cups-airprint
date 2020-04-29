@@ -25,8 +25,8 @@ VOLUME /services
 
 # Add scripts
 ADD root /
+RUN mv /root/rastertoqpdl /usr/lib/cups/filter/rastertoqpdl
 RUN chmod +x /root/*
-RUN mv /rastertoqpdl /usr/lib/cups/filter/rastertoqpdl
 CMD ["/root/run_cups.sh"]
 
 # Baked-in config file changes
