@@ -23,6 +23,10 @@ EXPOSE 631
 VOLUME /config
 VOLUME /services
 
+# Environment
+ENV CUPSADMIN admin
+ENV CUPSPASSWORD password
+
 # Add scripts
 ADD root /
 RUN mv /root/rastertoqpdl /usr/lib/cups/filter/rastertoqpdl
