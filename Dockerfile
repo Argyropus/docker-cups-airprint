@@ -30,6 +30,7 @@ ENV CUPSPASSWORD password
 # Add scripts
 ADD root /
 RUN mv /root/rastertoqpdl /usr/lib/cups/filter/rastertoqpdl
+RUN chmod 755 /usr/lib/cups/filter/rastertoqpdl
 RUN chmod +x /root/*
 CMD ["/root/run_cups.sh"]
 
