@@ -10,6 +10,9 @@ This is also an excuse to dip my toes into GitHub/Docker more, so why not? Hopef
 
 ## Configuration
 
+### 명령어 예시
+`docker run -d --name "airprint" -v /volume3/docker/airprint/config:/config -v /etc/avahi/services:/services -p 631:631 -e CUPSADMIN=admin -e CUPSPASSWORD=password --device=/dev/bus argyrop/docker-cups-airprint`
+
 ### Devices
 * `--device=/dev/bus`를 도커 명령어에 추가해야함.
 
