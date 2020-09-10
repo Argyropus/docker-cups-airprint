@@ -31,6 +31,7 @@ ENV CUPSPASSWORD password
 ADD root /
 RUN mv /root/rastertoqpdl /usr/lib/cups/filter/rastertoqpdl
 RUN chmod 755 /usr/lib/cups/filter/rastertoqpdl
+RUN mv /root/Samsung_ML-2160_Series.ppd /usr/share/cups/model/Samsung_ML-2160_Series.ppd
 RUN chmod +x /root/*
 CMD ["/root/run_cups.sh"]
 
