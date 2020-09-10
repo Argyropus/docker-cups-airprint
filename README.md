@@ -1,8 +1,6 @@
 # argyrop/docker-cups-airprint
 
-This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint relay for printers that are already on the network but not AirPrint capable. I'm using it on a Synology NAS because the built in server doesn't work properly with my printers. The local Avahi will be utilized for advertising the printers on the network.
-
-This is also an excuse to dip my toes into GitHub/Docker more, so why not? Hopefully someone else finds this useful.
+To use airprint on synology for samsung ml-2160 series
 
 ## Prereqs
 * No other printers should be shared under Control Panel>External Devices>Printer so that the DSM's CUPS is not running. 
